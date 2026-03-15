@@ -1,3 +1,6 @@
 - name: printing random message
-  ansible.builtin.debug:
-   message: "this system is [[ inventory_hostname ]]"
+  hosts: all
+
+  tasks:
+   ansible.builtin.debug:
+   message: "this system is {{ inventory_hostname }}"
