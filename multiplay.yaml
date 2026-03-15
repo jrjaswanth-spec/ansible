@@ -1,7 +1,6 @@
-- name: printing random message
-  hosts: all
-
+- name: PLAY-01
+  hosts: frontend
   tasks:
-   - name: print hostname message
-     ansible.builtin.debug:
-      message: "this system is {{ inventory_hostname }}"
+  - name: PLAY-01 and TASK-01
+    ansible.builtin.debug:
+      msg: "Hello from PLAY-01 and TASK-01"
