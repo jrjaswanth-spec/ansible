@@ -2,6 +2,6 @@
   hosts: all
 
   tasks:
-   -name: print hostname message
-    ansible.builtin.debug:
-     message: "this system is {{ inventory_hostname }}"
+   - name: print hostname message
+     ansible.builtin.debug:
+      message: "this system is {{ inventory_hostname }}"
