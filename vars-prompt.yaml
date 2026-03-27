@@ -1,0 +1,12 @@
+- name: play level variables
+  hosts: local
+
+  vars_prompt:
+    -name: username
+     prompt: "Enter your username"
+     private: no 
+     
+  tasks:
+  - name: print username
+    debug:
+       msg: "user entered is {{ username }}"
