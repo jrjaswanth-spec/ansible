@@ -2,7 +2,7 @@
   hosts: local
 
   vars_prompt:
-    -name: username
+   - name: username
      prompt: "Enter your username"
      private: no 
      
