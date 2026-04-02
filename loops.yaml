@@ -5,7 +5,7 @@
   tasks:
    - name: 
      ansible.builtin.package:
-      msg: "Hello {{ item }}" # item is reserved for loops
+      name: "Hello {{ item }}" # item is reserved for loops
       state: latest
      loop:
        - nginx
