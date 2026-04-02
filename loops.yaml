@@ -3,14 +3,13 @@
   connection: local
   become: yes
   tasks:
-   - name: 
+   - name: print names 
      ansible.builtin.package:
-      name: "Hello {{ item }}" # item is reserved for loops
+      name: "{{ item }}" # item is reserved for loops
       state: latest
      loop:
        - nginx
        - mongodb
        - mysql
-       - ubuntu
        - ansible
 
