@@ -8,7 +8,7 @@
       name: "{{ item.name }}" # item is reserved for loops
       state: "{{ latest.state }}"
      loop:
-  - { name: nginx, state: absent }   
-  - { name: mongodb, state: absent }  
-  - { name: zip, state: present }   
+      - { name: nginx, state: absent }   
+      - { name: mongodb, state: absent }  
+      - { name: zip, state: present }   
 
