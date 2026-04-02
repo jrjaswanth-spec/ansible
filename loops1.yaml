@@ -1,0 +1,14 @@
+- name: install multiple packages
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+   - name: print names 
+     ansible.builtin.package:
+      name: "{{ item.name }}" # item is reserved for loops
+      state: "{{ latest.state }}"
+     loop:
+  - { name: nginx, state: absent }   
+  - { name: mongodb, state: absent }  
+  - { name: zip, state: present }   
+
