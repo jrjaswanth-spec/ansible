@@ -2,6 +2,10 @@
   hosts: local
   connection: local
   vars:
+    data:
+       env: DevOps
+       app: nginx
+      
     technologies: DevOps, linux, shell, ansible 
   tasks:
   - name: default variable
@@ -14,4 +18,4 @@
 
   - name: convert dictionary to list
     ansible.builtin.debug:
-      msg: "Tags are: {{ tags | dict2items }}"
+      msg: "data is : {{ data | dict2items }}"
