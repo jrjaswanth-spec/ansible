@@ -7,6 +7,7 @@
        app: nginx   
     
     technologies: DevOps, linux, shell, ansible
+    #list
     listtags:
     - key: app
       value: payment
@@ -24,3 +25,8 @@
   - name: convert dictionary to list
     ansible.builtin.debug:
       msg: "data is : {{ data | dict2items }}"
+
+  - name: convert list into map or dictionary
+    ansible.builtin.debug:
+      msg: "tag map: {{ listtags | item2dict }}"
+      
