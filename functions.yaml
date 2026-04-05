@@ -4,9 +4,14 @@
   vars:
     data:
        env: DevOps
-       app: nginx
-      
-    technologies: DevOps, linux, shell, ansible 
+       app: nginx   
+    
+    technologies: DevOps, linux, shell, ansible
+    listtags:
+    - key: app
+      value: payment
+    - key: env
+      value: dev  
   tasks:
   - name: default variable
     ansible.builtin.debug:
