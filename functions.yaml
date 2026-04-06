@@ -9,6 +9,7 @@
     technologies: DevOps, linux, shell, ansible
     name: "jaswanth"
     gmail: JRF@GMAIL.COM
+    ipaddress: "1900.22.32.11"
     #list
     listtags:
     - key: app
@@ -49,7 +50,11 @@
     ansible.builtin.debug:
       msg: "{{ name | upper }}"
 
-  
   - name: convert lowercase
     ansible.builtin.debug:
       msg: "{{ gmail | lower }}"
+
+  - name: check IP is valid or not
+    ansible.builtin.debug: 
+      msg: "{{ ipaddress | ansible.utils.ipv4 }}"
+    
