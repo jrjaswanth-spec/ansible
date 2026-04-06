@@ -7,7 +7,7 @@
        app: nginx   
     
     technologies: DevOps, linux, shell, ansible
-    name: "jaswanth"
+    user_name: "jaswanth"
     gmail: JRF@GMAIL.COM
     ipaddress: "1900.22.32.11"
     #list
@@ -48,7 +48,7 @@
 
   - name: convert uppercase
     ansible.builtin.debug:
-      msg: "{{ name | upper }}"
+      msg: "{{ user_name | upper }}"
 
   - name: convert lowercase
     ansible.builtin.debug:
